@@ -46,12 +46,13 @@ namespace webforms_first_try
             int rooms = int.Parse(WebConfigurationManager.AppSettings["start"]);
             if (rooms < int.Parse(WebConfigurationManager.AppSettings["maxroom"]))
             {
-                TextArea1.Value = "Room Name: " + roomName;
-                TextArea1.Value += " Cost: " + totalCost + "\n";
-
+                //TextArea1.Value = "Room Name: " + roomName;
+                //TextArea1.Value += " Cost: " + totalCost + "\n";
+                TextArea1.Value = TextArea1.Value + "\n " + "Room Name: " + TextBox1.Text + " Room Area: " + TextBox4.Text + " Cost of Room: " + (int.Parse(TextBox4.Text) * int.Parse(TextBox5.Text));
+                WebConfigurationManager.AppSettings["start"] = (rooms + 1).ToString();
             } else
             {
-
+                Response.Write("<script>alert('You annot add more rooms');</script>");
             }
 
 

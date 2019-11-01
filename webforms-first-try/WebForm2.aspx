@@ -11,10 +11,10 @@
         <div>
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             <br />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter something" ControlToValidate="TextBox2"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter something" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
             <br />
-            
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <br />
+            <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Enter number between 10 and 100" ControlToValidate="TextBox1" MinimumValue="10" MaximumValue="100" Type="Integer"></asp:RangeValidator>
             
             <br />
         </div>
